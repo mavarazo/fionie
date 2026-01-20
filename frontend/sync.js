@@ -105,6 +105,10 @@ const SINGLE_CONTENT_MAP = {
 };
 
 async function downloadImages(items) {
+  if (!items) {
+    return [];
+  }
+
   const downloadPromises = items.map(async (item) => {
     return await downloadImage(item);
   });
@@ -113,6 +117,10 @@ async function downloadImages(items) {
 }
 
 async function downloadImage(item) {
+  if (!item) {
+    return;
+  }
+
   const imageName = `${item.hash}${item.ext}`;
   const imagePath = path.join(IMAGES_DIR, imageName);
 

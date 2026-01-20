@@ -1,5 +1,5 @@
 {
-  "name": "fini-kreativ",
+  "name": "fionie",
   "version": "0.0.1",
   "scripts": {
     "develop": "npm run sync && hugo server --buildDrafts --cleanDestinationDir --disableFastRender --ignoreCache",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mavarazo/fini-kreativ.git"
+    "url": "git+https://github.com/mavarazo/fionie.git"
   },
   "keywords": [],
   "author": "Marco Niederberger",

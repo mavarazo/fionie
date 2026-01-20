@@ -1,5 +1,5 @@
-baseURL: https://fini-kreativ.ch/
-title: fini-kreativ.ch
+baseURL: https://www.fionie.ch/
+title: Fiorella Niederberger
 
 languageCode: de-ch
 defaultContentLanguage: de
@@ -48,13 +48,13 @@ params:
   contact:
     name: Fiorella Niederberger
     location: Rothenburg, Schweiz
-    email: info[at]fini-kreativ.ch
+    email: info[at]fionie.ch
 
   googleAnalytics: G-4LLDP71Q6S
 
   logo: "images/logo-black.png"
 
   social:
-    instagram: fini_kreativ
+    instagram: fixme
 
   strapiBaseURL: http://localhost:1337
