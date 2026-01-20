@@ -9,21 +9,6 @@
             src="{{ .Site.Params.logo | absURL }}"
             class="max-h-[10rem] max-w-[10rem] object-scale-down object-center sm:object-left"
             alt="{{ .Site.Title }}" />
-
-          <span
-            class="absolute text-sm font-semibold text-gray-700"
-            style="
-              top: 0;
-              left: 10rem; 
-              transform: translateX(-50%); 
-              /* Responsives Styling für Desktop/Tablet (sm breakpoint) */
-              @media (min-width: 640px) {
-                  left: 10rem; /* Positioniert es rechts vom Logo (10rem Breite) */
-                  transform: translateX(0) translateY(10%); /* Nur leicht hochgestellt, keine horizontale Verschiebung */
-              }
-            ">
-            ®
-          </span>
         {{ end }}
       </div>
 
