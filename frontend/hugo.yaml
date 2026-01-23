@@ -50,11 +50,11 @@ params:
     location: Rothenburg, Schweiz
     email: info[at]fionie.ch
 
-  googleAnalytics: G-4LLDP71Q6S
+  googleAnalytics: G-578DE13VHF
 
   logo: "images/logo-black.png"
 
   social:
-    instagram: fixme
+    instagram: fionie_kreativ
 
   strapiBaseURL: http://localhost:1337
