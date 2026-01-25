@@ -17,7 +17,9 @@
       "enum": [
         "Clutch",
         "Necessaire",
-        "Sac"
+        "Sac",
+        "Handytasche",
+        "Allerlei"
       ]
     },
     "title": {

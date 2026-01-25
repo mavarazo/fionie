@@ -23,9 +23,45 @@ const STRAPI_DISABLE_PAGINATION = "pagination[limit]=999";
 const STRAPI_POPULATE_ALL = "populate=*";
 
 const COLLECTION_CONTENT_MAP = {
+  allerlei: {
+    dataUrlPath: `/products?filters[type][$eq]=Allerlei&${STRAPI_DISABLE_PAGINATION}&${STRAPI_POPULATE_ALL}`,
+    contentTitle: "Dies & Das",
+    contentType: "products",
+    additionalContentProperties: [
+      { key: "price" },
+      { key: "isReserved" },
+      { key: "isSold" },
+      {
+        key: "cover",
+        transform: async (image) => downloadImage(image),
+      },
+      {
+        key: "images",
+        transform: async (images) => downloadImages(images),
+      },
+    ],
+  },
   clutches: {
     dataUrlPath: `/products?filters[type][$eq]=Clutch&${STRAPI_DISABLE_PAGINATION}&${STRAPI_POPULATE_ALL}`,
     contentTitle: "Clutches",
+    contentType: "products",
+    additionalContentProperties: [
+      { key: "price" },
+      { key: "isReserved" },
+      { key: "isSold" },
+      {
+        key: "cover",
+        transform: async (image) => downloadImage(image),
+      },
+      {
+        key: "images",
+        transform: async (images) => downloadImages(images),
+      },
+    ],
+  },
+  handytaschen: {
+    dataUrlPath: `/products?filters[type][$eq]=Handytasche&${STRAPI_DISABLE_PAGINATION}&${STRAPI_POPULATE_ALL}`,
+    contentTitle: "Handytaschen",
     contentType: "products",
     additionalContentProperties: [
       { key: "price" },
@@ -217,7 +253,7 @@ async function generateCollectionContent(key, contentConfig) {
 
   if (!fs.existsSync(dataPath)) {
     console.error(`❌ ERROR: Data file for ${key} not found at ${dataPath}`);
-    process.exit(1);
+    return;
   }
 
   const targetDir = path.join(CONTENT_DIR, key);
@@ -239,7 +275,7 @@ async function generateSingleContent(key, contentConfig) {
 
   if (!fs.existsSync(dataPath)) {
     console.error(`❌ ERROR: Data file for ${key} not found at ${dataPath}`);
-    process.exit(1);
+    return;
   }
 
   const data = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
@@ -299,7 +335,7 @@ async function fetchAndSave(key, dataConfig) {
     console.log(`✅ ${fileName} saved.`);
   } catch (error) {
     console.error(`❌ ERROR fetching ${key}:`, error.message);
-    process.exit(1);
+    return;
   }
 }
 

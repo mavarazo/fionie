@@ -15,14 +15,14 @@ build:
 
 menu:
   main:
-    - name: Clutches
-      url: /clutches/
-      weight: 20
     - name: Necessaires
       url: /necessaires/
       weight: 10
-    - name: Wäschesäcke
-      url: /sacs/
+    - name: Handytaschen
+      url: /handytaschen/
+      weight: 20
+    - name: Dies & Das
+      url: /allerlei/
       weight: 30
     - name: Kontakt
       url: /contact
