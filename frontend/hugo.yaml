@@ -57,4 +57,4 @@ params:
   social:
     instagram: fionie_kreativ
 
-  strapiBaseURL: http://localhost:1337
+  submissionEndpoint: https://submission.fionie.ch
